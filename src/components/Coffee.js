@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Cocktail = () => {
+const Coffee = () => {
   return (
     <div>
       <h2>cocktail component</h2>
@@ -9,4 +9,4 @@ const Cocktail = () => {
   )
 }
 
-export default Cocktail
+export default Coffee
