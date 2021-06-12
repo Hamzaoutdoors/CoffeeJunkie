@@ -1,12 +1,12 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Coffee = () => {
   return (
     <div>
-      <h2>cocktail component</h2>
+      <h2>coffee component</h2>
     </div>
-  )
-}
+  );
+};
 
-export default Coffee
+export default Coffee;

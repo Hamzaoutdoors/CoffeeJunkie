@@ -3,7 +3,7 @@ import Coffee from "./Coffee";
 import Loading from "./Loading";
 import { useGlobalContext } from "../context";
 
-const CoffeeList = () => {
+const ProductsList = () => {
   const { coffees, loading } = useGlobalContext();
 
   /* if (loading) {
@@ -14,9 +14,9 @@ const CoffeeList = () => {
   } */
   return (
     <div>
-      <h2>Coffee list component</h2>
+      <h2>Products list component</h2>
     </div>
   );
 };
 
-export default CoffeeList;
+export default ProductsList;

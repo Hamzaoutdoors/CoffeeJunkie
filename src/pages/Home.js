@@ -4,9 +4,12 @@ import SearchForm from "../components/SearchForm";
 
 const Home = () => {
   return (
-    <div>
-      <h2>home page</h2>
-    </div>
+    <main className="home">
+      <div className="home-container">
+        <SearchForm />
+        <CoffeeList />
+      </div>
+    </main>
   );
 };
 

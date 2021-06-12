@@ -6,7 +6,7 @@ const url = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=";
 const SingleCoffee = () => {
   return (
     <div>
-      <h2>single cocktail page </h2>
+      <h2>single coffee page </h2>
     </div>
   );
 };
