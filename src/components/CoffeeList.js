@@ -6,12 +6,19 @@ import { useGlobalContext } from "../context";
 const CoffeeList = () => {
   const { coffees, loading } = useGlobalContext();
 
-  /* if (loading) {
+  if (loading) {
     return <Loading />;
   }
   if (Coffee.length < 1) {
-    <h2 className="section-title">no coffees matched your search criteria</h2>;
-  } */
+    return (
+      <div>
+        <h2 className="section-title">
+          no coffees matched your search criteria
+        </h2>
+        ;
+      </div>
+    );
+  }
   return (
     <div>
       <h2>Coffee list component</h2>

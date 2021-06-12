@@ -1,6 +1,7 @@
 import React from "react";
 import { FaTimes } from "react-icons/fa";
 import { useGlobalContext } from "../context";
+import { Link } from "react-router-dom";
 import sublinks from "../data";
 
 const Sidebar = () => {
@@ -28,9 +29,11 @@ const Sidebar = () => {
                       const { label, icon, url } = link;
                       return (
                         <div key="index">
-                          <a href={url}>
-                            {icon} {label}
-                          </a>
+                          <Link to={url}>
+                            <a className="link-btn">
+                              {icon} {label}
+                            </a>
+                          </Link>
                         </div>
                       );
                     })}
