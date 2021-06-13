@@ -9,20 +9,25 @@ const CoffeeList = () => {
   if (loading) {
     return <Loading />;
   }
-  if (Coffee.length < 1) {
+  if (coffees.length < 1) {
     return (
-      <div>
+      <section className="section">
         <h2 className="section-title">
           no coffees matched your search criteria
         </h2>
         ;
-      </div>
+      </section>
     );
   }
   return (
-    <div>
-      <h2>Coffee list component</h2>
-    </div>
+    <section className="section">
+      <h2 className="section-title">Our Drinks</h2>
+      <div className="coffees-center">
+        {coffees.map((item) => {
+          return <Coffee key={item.id} {...item} />;
+        })}
+      </div>
+    </section>
   );
 };
 

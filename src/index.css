@@ -6,6 +6,7 @@ Variables
 :root {
   --primaryLightColor: #d4e6a5;
   --primaryColor: #476a2e;
+  --mudColor: #967259;
   --primaryDarkColor: #c02c03;
   --mainWhite: #fff;
   --offWhite: #f7f7f7;
@@ -208,6 +209,7 @@ Navbar
 .nav-links {
   display: none;
 }
+
 .nav-links a {
   text-transform: capitalize;
   display: inline-block;
@@ -239,7 +241,6 @@ Navbar
   }
 
   .nav-links {
-    display: block;
     justify-self: center;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -251,6 +252,8 @@ Navbar
   }
   .nav-links li {
     height: 100%;
+    display: flex;
+    align-items: center;
   }
   .link-btn {
     height: 100%;
@@ -350,10 +353,12 @@ Home
   bottom: 0px;
   left: 0px;
   opacity: 0.3;
+  min-height: 50vh;
 }
 .home-container {
   position: relative;
 }
+
 /* 
 ====== 
 About
@@ -420,12 +425,13 @@ Error
 }
 /* 
 ====== 
-Cocktails List 
+Coffees List 
 ======
 */
 
 .section {
   padding: 5rem 0;
+  min-height: 50vh;
 }
 .section-title {
   font-size: 2rem;
@@ -435,27 +441,28 @@ Cocktails List
   margin-bottom: 3.5rem;
   margin-top: 1rem;
 }
-.cocktails-center {
+.coffees-center {
   width: var(--smallWidth);
   margin: 0 auto;
   max-width: var(--fullWidth);
   display: grid;
   row-gap: 2rem;
   column-gap: 2rem;
+
   /* align-items: start; */
 }
 @media screen and (min-width: 576px) {
-  .cocktails-center {
+  .coffees-center {
     grid-template-columns: repeat(auto-fill, minmax(338.8px, 1fr));
   }
 }
 /* 
 ====== 
-Cocktail 
+Coffee
 ======
 */
 
-.cocktail {
+.coffee {
   background: var(--mainWhite);
   margin-bottom: 2rem;
   box-shadow: var(--lightShadow);
@@ -464,27 +471,27 @@ Cocktail
   grid-template-rows: auto 1fr;
   border-radius: var(--mainBorderRadius);
 }
-.cocktail:hover {
+.coffee:hover {
   box-shadow: var(--darkShadow);
 }
-.cocktail img {
+.coffee img {
   height: 20rem;
   object-fit: cover;
   border-top-left-radius: var(--mainBorderRadius);
   border-top-right-radius: var(--mainBorderRadius);
 }
-.cocktail-footer {
+.coffee-footer {
   padding: 1.5rem;
 }
-.cocktail-footer h3,
-.cocktail-footer h4,
-.cocktail-footer p {
+.coffee-footer h3,
+.coffee-footer h4,
+.coffee-footer p {
   margin-bottom: 0.3rem;
 }
-.cocktail-footer h3 {
+.coffee-footer h3 {
   font-size: 2rem;
 }
-.cocktail-footer p {
+.coffee-footer p {
   color: var(--darkGrey);
   margin-bottom: 0.5rem;
 }
@@ -527,11 +534,11 @@ Form
 }
 /* 
 ====== 
-Cocktail
+Coffee
 ======
 */
 
-.cocktail-section {
+.coffee-section {
   text-align: center;
 }
 .drink {
@@ -571,6 +578,8 @@ Cocktail
     padding-top: 0;
   }
 }
+/*/ Loading /*/
+
 .loader,
 .loader:before,
 .loader:after {
@@ -581,7 +590,7 @@ Cocktail
   height: 4em;
 }
 .loader {
-  color: var(--primaryColor);
+  color: var(--mudColor);
   text-indent: -9999em;
   margin: 88px auto;
   margin-top: 20rem;
@@ -630,4 +639,7 @@ Cocktail
     box-shadow: 0 -2em;
     height: 5em;
   }
+}
+.loader-container {
+  min-height: 50vh;
 }

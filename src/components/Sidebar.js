@@ -29,7 +29,7 @@ const Sidebar = () => {
                       const { label, icon, url } = link;
                       return (
                         <div key="index">
-                          <Link to={url}>
+                          <Link to={url} onClick={closeSidebar}>
                             <a className="link-btn">
                               {icon} {label}
                             </a>
