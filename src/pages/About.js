@@ -30,7 +30,7 @@ const About = () => {
           around them. The idea originated about Coffee Junkie, and it was just
           a matter of time before we started working on our dream project.
         </p>
-        <button className="btn-primary">Know more</button>
+        <button className="btn-primary btn-about">Know more</button>
       </section>
     </main>
   );

@@ -14,7 +14,7 @@ Variables
   --mainOverlay: rgba(35, 10, 36, 0.4);
   --mainBlack: #222;
   --mainGrey: #ececec;
-  --darkGrey: #afafaf;
+  --darkGrey: #696969;
   --mainRed: #bd0303;
   --mainTransition: all 0.3s linear;
   --mainSpacing: 0.3rem;
@@ -345,14 +345,13 @@ Home
 }
 .home::before {
   content: "";
-  background-image: url("https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=730&q=80");
-  background-size: cover;
+  background-image: url("https://image.freepik.com/free-vector/coffee-seamless-pattern-background-vector-with-white-icons-black-coffee-pot-percolator-steaming-mugs-cups-beans-hearts-espresso-filter-cappuccino-iced-coffee-square-format_1284-44088.jpg");
   position: absolute;
   top: 0px;
   right: 0px;
   bottom: 0px;
   left: 0px;
-  opacity: 0.3;
+  opacity: 0.15;
   min-height: 50vh;
 }
 .home-container {
@@ -410,6 +409,9 @@ About
   font-weight: 400;
   letter-spacing: 2px;
 }
+.btn-about {
+  margin-top: 2rem;
+}
 /* 
 ====== 
 Error
@@ -433,13 +435,16 @@ Coffees List
   padding: 5rem 0;
   min-height: 50vh;
 }
+.coffee-title {
+  margin-bottom: 3.5rem;
+}
 .section-title {
   font-size: 2rem;
   text-transform: capitalize;
   letter-spacing: var(--mainSpacing);
   text-align: center;
-  margin-bottom: 3.5rem;
   margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 .coffees-center {
   width: var(--smallWidth);
@@ -463,6 +468,7 @@ Coffee
 */
 
 .coffee {
+  position: relative;
   background: var(--mainWhite);
   margin-bottom: 2rem;
   box-shadow: var(--lightShadow);
@@ -480,6 +486,12 @@ Coffee
   border-top-left-radius: var(--mainBorderRadius);
   border-top-right-radius: var(--mainBorderRadius);
 }
+.coffee .img-container {
+  transition: 0.6s ease transform;
+}
+.coffee .img-container:hover img {
+  transform: scale(0.98);
+}
 .coffee-footer {
   padding: 1.5rem;
 }
@@ -494,6 +506,11 @@ Coffee
 .coffee-footer p {
   color: var(--darkGrey);
   margin-bottom: 0.5rem;
+}
+.footer-btn {
+  position: absolute;
+  bottom: 5px;
+  left: 4px;
 }
 /* 
 ====== 
@@ -515,7 +532,9 @@ Form
   border-radius: var(--mainBorderRadius);
   box-shadow: var(--lightShadow);
 }
-
+.form-control {
+  position: relative;
+}
 .form-control label {
   display: block;
   margin-bottom: 1.25rem;
@@ -531,6 +550,13 @@ Form
   border-radius: var(--mainBorderRadius);
   padding: 0.5rem;
   font-size: 1.2rem;
+}
+.form-control .search-icon {
+  position: absolute;
+  right: 10px;
+  bottom: 13px;
+  color: var(--darkGrey);
+  opacity: 0.7;
 }
 /* 
 ====== 

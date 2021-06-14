@@ -7,25 +7,20 @@ const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
-  const [searchTerm, setSearchTerm] = useState("a");
+  const [searchTerm, setSearchTerm] = useState("");
   const [coffees, setCoffees] = useState([]);
   const [searchTarget, setSearchTarget] = useState(true);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [location, setLocation] = useState({});
   const [page, setPage] = useState({ page: "", links: [] });
 
-  const fetchDrinks = /* async  */ () => {
+  const fetchDrinks = () => {
     setLoading(true);
-    /*  try {
-      const res = await fetch(`${url}`);
-      const data = await res.json();
-      const { drinks } = data; */
-
     if (coffeeData) {
       const newCoffees = coffeeData.map((item) => {
         const {
           id,
-          category,
+          categories,
           name,
           thumbnail_image,
           detail_image,
@@ -34,7 +29,7 @@ const AppProvider = ({ children }) => {
         } = item;
         return {
           id: id,
-          category: category,
+          category: categories,
           name: name,
           imgThum: thumbnail_image,
           imgDtl: detail_image,
@@ -49,8 +44,19 @@ const AppProvider = ({ children }) => {
     setLoading(false);
   };
   useEffect(() => {
+    const results = !searchTerm
+      ? coffees
+      : coffees.filter((coffee) =>
+          coffee.name.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+
+    setCoffees(results);
+  }, [searchTerm]);
+  /*  */
+  useEffect(() => {
     fetchDrinks();
   }, [searchTerm]);
+
   const openSidebar = () => {
     setIsSidebarOpen(true);
   };
@@ -67,7 +73,9 @@ const AppProvider = ({ children }) => {
         location,
         page,
         searchTarget,
+        searchTerm,
         setSearchTarget,
+        setCoffees,
         setSearchTerm,
         openSidebar,
         closeSidebar,

@@ -21,7 +21,10 @@ const CoffeeList = () => {
   }
   return (
     <section className="section">
-      <h2 className="section-title">Our Drinks</h2>
+      <div className="coffee-title">
+        <h2 className="section-title">Our Drinks</h2>
+        <div className="underline"></div>
+      </div>
       <div className="coffees-center">
         {coffees.map((item) => {
           return <Coffee key={item.id} {...item} />;
