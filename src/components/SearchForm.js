@@ -3,21 +3,24 @@ import { FaSearch } from "react-icons/fa";
 import { useGlobalContext } from "../context";
 
 const SearchForm = () => {
-  const { setSearchTerm, searchTarget } = useGlobalContext();
+  const { setSearchTerm, searchTarget, setCoffees, coffees, searchTerm } =
+    useGlobalContext();
   const searchValue = React.useRef("");
 
   React.useEffect(() => {
     searchValue.current.focus();
   }, []);
 
-  const searchCoffee = () => {
-    setSearchTerm(searchValue.current.value);
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
   };
-
+  React.useEffect(() => {
+    const results = coffees.filter((coffee) =>
+      coffee.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    setCoffees(results);
+  }, [searchTerm]);
+  console.log(coffees);
   return (
     <section className="section search">
       <form className="search-form" onSubmit={handleSubmit}>
@@ -30,8 +33,9 @@ const SearchForm = () => {
             placeholder="Search"
             name="name"
             id="name"
+            value={searchTerm}
             ref={searchValue}
-            onChange={searchCoffee}
+            onChange={() => setSearchTerm(searchValue.current.value)}
             className="input-field"
           ></input>
           <FaSearch className="search-icon" />

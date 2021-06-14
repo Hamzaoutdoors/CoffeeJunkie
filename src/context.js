@@ -11,8 +11,6 @@ const AppProvider = ({ children }) => {
   const [coffees, setCoffees] = useState([]);
   const [searchTarget, setSearchTarget] = useState(true);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [location, setLocation] = useState({});
-  const [page, setPage] = useState({ page: "", links: [] });
 
   const fetchDrinks = useCallback(() => {
     setLoading(true);
@@ -43,15 +41,6 @@ const AppProvider = ({ children }) => {
     }
     setLoading(false);
   }, [searchTerm]);
-  /*  useEffect(() => {
-    const results = !searchTerm
-      ? coffees
-      : coffees.filter((coffee) =>
-          coffee.name.toLowerCase().includes(searchTerm.toLowerCase())
-        );
-
-    setCoffees(results);
-  }, [searchTerm]); */
 
   useEffect(() => {
     fetchDrinks();
@@ -70,8 +59,6 @@ const AppProvider = ({ children }) => {
         loading,
         coffees,
         isSidebarOpen,
-        location,
-        page,
         searchTarget,
         searchTerm,
         setSearchTarget,
