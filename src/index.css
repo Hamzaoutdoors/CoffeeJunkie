@@ -223,6 +223,9 @@ Navbar
 }
 .nav-links a:hover {
   color: var(--primaryColor);
+  font-weight: 500;
+  font-size: 1.8rem;
+  letter-spacing: 2.2px;
 }
 
 .logo {
@@ -331,6 +334,7 @@ Navbar
     display: none;
   }
 }
+
 /* 
 ====== 
 Home
@@ -340,7 +344,7 @@ Home
   position: relative;
   text-align: center;
   min-width: 100%;
-  min-height: 100%;
+  min-height: 100vh;
   text-align: center;
 }
 .home::before {
@@ -389,6 +393,7 @@ About
   max-width: var(--maxWidth);
   margin: 0 auto;
   color: rgb(0, 0, 0);
+  margin-top: 2rem;
 }
 .about-title h1 {
   margin-bottom: 1rem;
@@ -412,6 +417,58 @@ About
 .btn-about {
   margin-top: 2rem;
 }
+.social {
+  position: relative;
+  width: 100%;
+}
+.social-icons {
+  justify-self: center;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 5rem;
+}
+.social-icons a {
+  font-size: 2rem;
+  margin: 5px 0.5rem;
+  color: var(--mudColor);
+  transition: all 0.3s linear;
+}
+.social-icons a:hover {
+  color: var(--primaryColor);
+}
+.under {
+  width: 2rem;
+  height: 0.15rem;
+  margin-bottom: 1.25rem;
+  background: var(--primaryColor);
+  margin-left: auto;
+  margin-right: auto;
+}
+/* 
+====== 
+Product
+======
+*/
+.product {
+  position: relative;
+  text-align: center;
+  min-width: 100vw;
+  min-height: 100vh;
+  margin-top: -5rem;
+}
+.product::before {
+  content: "";
+  background-image: url("https://images.unsplash.com/photo-1508690207469-5c5aebedf76d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80");
+  background-size: cover;
+  background-repeat: repeat-x;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.3;
+  z-index: -1;
+}
 /* 
 ====== 
 Error
@@ -433,7 +490,7 @@ Coffees List
 
 .section {
   padding: 5rem 0;
-  min-height: 50vh;
+  min-height: 0vh;
 }
 .coffee-title {
   margin-bottom: 3.5rem;

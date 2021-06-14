@@ -1,10 +1,10 @@
 import React from "react";
-import Coffee from "./Coffee";
+import coffeeCategories from "../categories";
 import Loading from "./Loading";
 import { useGlobalContext } from "../context";
 
 const ProductsList = () => {
-  const { coffees, loading } = useGlobalContext();
+  const { loading } = useGlobalContext();
 
   return (
     <div>

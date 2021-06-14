@@ -1,4 +1,4 @@
-const categories = [
+const coffeeCategories = [
   {
     id: 1,
     name: "Coffee",
@@ -37,4 +37,4 @@ const categories = [
   },
 ];
 
-export default categories;
+export default coffeeCategories;

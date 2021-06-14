@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Loading from "../components/Loading";
 import { useParams, Link } from "react-router-dom";
 import coffeeData from "../coffeeData";
+import coffeeCategories from "../categories";
 
 const SingleCoffee = () => {
   const { id } = useParams();
@@ -45,7 +46,12 @@ const SingleCoffee = () => {
           </p>
           <div className="drink-catPrice">
             <p>
-              <span className="drink-data">Category :</span>~ {categories}
+              <span className="drink-data">Category :</span>{" "}
+              {coffeeCategories.map((item, index) => {
+                if (item.id === categories) {
+                  return <span key={index}>~ {item.name}</span>;
+                }
+              })}
             </p>
             <p>
               <span className="drink-data">price :</span>${price}.00

@@ -1,4 +1,5 @@
 import React from "react";
+import { social } from "../data";
 
 const About = () => {
   return (
@@ -31,6 +32,19 @@ const About = () => {
           a matter of time before we started working on our dream project.
         </p>
         <button className="btn-primary btn-about">Know more</button>
+        <div className="social">
+          <ul className="social-icons">
+            {social.map((link) => {
+              const { id, url, icon } = link;
+              return (
+                <li key={id}>
+                  <a href={url}>{icon}</a>
+                  <div className="under"></div>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
       </section>
     </main>
   );

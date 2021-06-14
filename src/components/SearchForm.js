@@ -23,7 +23,7 @@ const SearchForm = () => {
       <form className="search-form" onSubmit={handleSubmit}>
         <div className="form-control">
           <label htmlFor="name">
-            search your favourite {`${searchTarget ? "Coffee" : "Product"}`}
+            search your favourite {`${searchTarget ? "Drink" : "Product"}`}
           </label>
           <input
             type="text"

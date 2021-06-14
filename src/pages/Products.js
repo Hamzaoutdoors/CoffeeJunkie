@@ -4,9 +4,10 @@ import SearchForm from "../components/SearchForm";
 
 const Products = () => {
   return (
-    <main>
-      <SearchForm />
-      <ProductsList />
+    <main className="product">
+      <div className="product-container">
+        <ProductsList />
+      </div>
     </main>
   );
 };

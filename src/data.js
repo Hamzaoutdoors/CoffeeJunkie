@@ -1,6 +1,15 @@
-import { FaCreditCard, FaBook, FaBriefcase } from "react-icons/fa";
+import {
+  FaCreditCard,
+  FaBook,
+  FaBriefcase,
+  FaBehance,
+  FaFacebook,
+  FaLinkedin,
+  FaTwitter,
+  FaSketch,
+} from "react-icons/fa";
 import React from "react";
-const sublinks = [
+export const sublinks = [
   {
     page: "Products",
     links: [
@@ -27,4 +36,30 @@ const sublinks = [
   },
 ];
 
-export default sublinks;
+export const social = [
+  {
+    id: 1,
+    url: "https://www.twitter.com",
+    icon: <FaFacebook />,
+  },
+  {
+    id: 2,
+    url: "https://www.twitter.com",
+    icon: <FaTwitter />,
+  },
+  {
+    id: 3,
+    url: "https://www.twitter.com",
+    icon: <FaLinkedin />,
+  },
+  {
+    id: 4,
+    url: "https://www.twitter.com",
+    icon: <FaBehance />,
+  },
+  {
+    id: 5,
+    url: "https://www.twitter.com",
+    icon: <FaSketch />,
+  },
+];
