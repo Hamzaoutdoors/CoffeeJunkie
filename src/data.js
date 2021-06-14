@@ -13,7 +13,7 @@ export const sublinks = [
   {
     page: "Products",
     links: [
-      { label: "payment", icon: <FaCreditCard />, url: "/products" },
+      { label: "Product", icon: <FaCreditCard />, url: "/products" },
       { label: "terminal", icon: <FaCreditCard />, url: "/products" },
       { label: "connect", icon: <FaCreditCard />, url: "/products" },
     ],

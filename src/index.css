@@ -469,6 +469,16 @@ Product
   opacity: 0.3;
   z-index: -1;
 }
+.product .img-container {
+  position: relative;
+  text-align: center;
+}
+.img-container h3 {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 /* 
 ====== 
 Error

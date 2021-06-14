@@ -38,7 +38,9 @@ const About = () => {
               const { id, url, icon } = link;
               return (
                 <li key={id}>
-                  <a href={url}>{icon}</a>
+                  <a href={url} target="_blanck">
+                    {icon}
+                  </a>
                   <div className="under"></div>
                 </li>
               );
