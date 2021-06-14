@@ -11,7 +11,7 @@ const Coffee = ({ id, category, name, imgThum, imgDtl, info, price }) => {
         <h3>{name}</h3>
         <h4>Class : {category}</h4>
         <div className="footer-btn">
-          <Link to={`/coffee/:${id}`} className="btn-primary">
+          <Link to={`/coffee/${id}`} className="btn-primary">
             details
           </Link>
         </div>

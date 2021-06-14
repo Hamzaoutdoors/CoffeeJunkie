@@ -576,10 +576,14 @@ Coffee
 .drink img {
   border-radius: var(--mainBorderRadius);
 }
+.drink-catPrice {
+  display: flex;
+}
 .drink p {
   font-weight: bold;
   text-transform: capitalize;
   line-height: 1.8;
+  margin-right: 4rem;
 }
 .drink span {
   margin-right: 0.5rem;
