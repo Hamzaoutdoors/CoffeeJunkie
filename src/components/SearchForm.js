@@ -6,11 +6,10 @@ const SearchForm = () => {
   const {
     setSearchTerm,
     searchTarget,
-    setCoffees,
-    coffees,
+    allCoffees,
     searchTerm,
-    filterDisplay,
-    setFilterDisplay,
+    filterCoffees,
+    setFilterCoffees,
   } = useGlobalContext();
   const searchValue = React.useRef("");
 
@@ -23,14 +22,14 @@ const SearchForm = () => {
   };
   useEffect(() => {
     if (searchTerm !== "") {
-      const results = coffees.filter((coffee) =>
+      const results = allCoffees.filter((coffee) =>
         coffee.name.toLowerCase().includes(searchTerm.toLowerCase())
       );
-      setFilterDisplay(results);
+      setFilterCoffees(results);
     } else {
-      setFilterDisplay(coffees);
+      setFilterCoffees(allCoffees);
     }
-  }, [searchTerm]);
+  }, [searchTerm, allCoffees]);
   return (
     <section className="section search">
       <form className="search-form" onSubmit={handleSubmit}>

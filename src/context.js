@@ -8,8 +8,8 @@ const AppContext = React.createContext();
 const AppProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
-  const [coffees, setCoffees] = useState([]);
-  const [filterDisplay, setFilterDisplay] = useState([]);
+  const [allCoffees, setAllCoffees] = useState([]);
+  const [filterCoffees, setFilterCoffees] = useState([]);
   const [searchTarget, setSearchTarget] = useState(true);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
@@ -36,9 +36,9 @@ const AppProvider = ({ children }) => {
           price: price,
         };
       });
-      setCoffees(newCoffees);
+      setAllCoffees(newCoffees);
     } else {
-      setCoffees([]);
+      setAllCoffees([]);
     }
     setLoading(false);
   };
@@ -58,14 +58,13 @@ const AppProvider = ({ children }) => {
     <AppContext.Provider
       value={{
         loading,
-        coffees,
+        allCoffees,
         isSidebarOpen,
         searchTarget,
         searchTerm,
-        filterDisplay,
-        setFilterDisplay,
+        filterCoffees,
+        setFilterCoffees,
         setSearchTarget,
-        setCoffees,
         setSearchTerm,
         openSidebar,
         closeSidebar,
