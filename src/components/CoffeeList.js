@@ -4,12 +4,12 @@ import Loading from "./Loading";
 import { useGlobalContext } from "../context";
 
 const CoffeeList = () => {
-  const { coffees, loading } = useGlobalContext();
+  const { filterDisplay, loading, searchTerm } = useGlobalContext();
 
   if (loading) {
     return <Loading />;
   }
-  if (coffees.length < 1) {
+  if (filterDisplay.length < 1) {
     return (
       <section className="section">
         <h2 className="section-title">
@@ -19,6 +19,7 @@ const CoffeeList = () => {
       </section>
     );
   }
+
   return (
     <section className="section">
       <div className="coffee-title">
@@ -26,7 +27,7 @@ const CoffeeList = () => {
         <div className="underline"></div>
       </div>
       <div className="coffees-center">
-        {coffees.map((item) => {
+        {filterDisplay.map((item) => {
           return <Coffee key={item.id} {...item} />;
         })}
       </div>

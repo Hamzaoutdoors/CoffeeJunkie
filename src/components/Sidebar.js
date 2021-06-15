@@ -1,5 +1,5 @@
 import React from "react";
-import { FaTimes } from "react-icons/fa";
+import { FaTimes, FaHiking } from "react-icons/fa";
 import { useGlobalContext } from "../context";
 import { Link } from "react-router-dom";
 import { sublinks } from "../data";
@@ -41,6 +41,14 @@ const Sidebar = () => {
                 </article>
               );
             })}
+          </div>
+          <div className="brand">
+            <p>
+              CoffeeShop Copyright &copy; 2021{" "}
+              <span>
+                by Hamza Ellaouzi <FaHiking />
+              </span>
+            </p>
           </div>
         </div>
       </aside>

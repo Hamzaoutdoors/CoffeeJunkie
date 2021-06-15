@@ -9,10 +9,11 @@ const AppProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
   const [coffees, setCoffees] = useState([]);
+  const [filterDisplay, setFilterDisplay] = useState([]);
   const [searchTarget, setSearchTarget] = useState(true);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  const fetchDrinks = useCallback(() => {
+  const fetchDrinks = () => {
     setLoading(true);
     if (coffeeData) {
       const newCoffees = coffeeData.map((item) => {
@@ -40,11 +41,11 @@ const AppProvider = ({ children }) => {
       setCoffees([]);
     }
     setLoading(false);
-  }, [searchTerm]);
+  };
 
   useEffect(() => {
     fetchDrinks();
-  }, [searchTerm, fetchDrinks]);
+  }, []);
 
   const openSidebar = () => {
     setIsSidebarOpen(true);
@@ -61,6 +62,8 @@ const AppProvider = ({ children }) => {
         isSidebarOpen,
         searchTarget,
         searchTerm,
+        filterDisplay,
+        setFilterDisplay,
         setSearchTarget,
         setCoffees,
         setSearchTerm,
