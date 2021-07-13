@@ -41,6 +41,11 @@ const Navbar = () => {
               <a className="link-btn">Products</a>
             </Link>
           </li>
+          <li>
+            <Link to="/basket" onClick={products}>
+              <a className="link-btn">Basket</a>
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>

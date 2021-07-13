@@ -6,6 +6,8 @@ import About from "./pages/About";
 import Products from "./pages/Products";
 import SingleCoffee from "./pages/SingleCoffee";
 import Error from "./pages/Error";
+import Basket from "./pages/Basket";
+
 // import components
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
@@ -18,6 +20,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home}></Route>
         <Route path="/about" component={About}></Route>
+        <Route path="/basket" component={Basket}></Route>
         <Route path="/products" component={Products}></Route>
         <Route path="/coffee/:id" component={SingleCoffee}></Route>
         <Route path="*" component={Error}></Route>

@@ -1,7 +1,14 @@
-import React from "react";
+import React, {useEffect, useRef} from "react";
 import { Link } from "react-router-dom";
+import { useGlobalContext } from "../context";
+
 
 const Coffee = ({ id, category, name, imgThum, imgDtl, info, price }) => {
+  const {
+    setAddedToBasket,
+    addedToBasket
+  } = useGlobalContext();
+
   return (
     <article className="coffee">
       <div className="img-container">
@@ -14,6 +21,9 @@ const Coffee = ({ id, category, name, imgThum, imgDtl, info, price }) => {
           <Link to={`/coffee/${id}`} className="btn-primary">
             details
           </Link>
+          <button className='btn btn-add-basket' onClick={()=>setAddedToBasket([...addedToBasket, id])} >
+            +     
+          </button>
         </div>
       </div>
     </article>
