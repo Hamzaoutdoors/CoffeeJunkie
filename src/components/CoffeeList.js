@@ -1,10 +1,19 @@
-import React from "react";
+import React,{useEffect, useRef} from "react";
 import Coffee from "./Coffee";
 import Loading from "./Loading";
 import { useGlobalContext } from "../context";
 
+const useDidMountEffect = (func, deps) => {
+  const didMount = useRef(false);
+
+  useEffect(() => {
+      if (didMount.current) func();
+      else didMount.current = true;
+  }, deps);
+}
 const CoffeeList = () => {
-  const { filterCoffees, loading, searchTerm } = useGlobalContext();
+  const { filterCoffees, loading,addedToBasket, searchTerm } = useGlobalContext();
+  useDidMountEffect(()=>alert('your coffee is successfuly added To basket'), [addedToBasket]);
 
   if (loading) {
     return <Loading />;

@@ -138,6 +138,9 @@ Buttons
   color: var(--mainWhite);
   border-color: var(--mainWhite);
 }
+.btn-add-basket{
+  margin-left: 150px;
+}
 .btn-white:hover {
   background: var(--mainWhite);
   color: var(--primaryColor);
@@ -246,7 +249,7 @@ Navbar
   .nav-links {
     justify-self: center;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     text-align: center;
     height: 100%;
     display: grid;

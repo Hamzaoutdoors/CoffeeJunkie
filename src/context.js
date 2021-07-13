@@ -9,6 +9,7 @@ const AppProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
   const [allCoffees, setAllCoffees] = useState([]);
+  const [addedToBasket, setAddedToBasket] = useState([]);
   const [filterCoffees, setFilterCoffees] = useState([]);
   const [searchTarget, setSearchTarget] = useState(true);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -63,10 +64,12 @@ const AppProvider = ({ children }) => {
         searchTarget,
         searchTerm,
         filterCoffees,
+        addedToBasket,
         setFilterCoffees,
         setSearchTarget,
         setSearchTerm,
         openSidebar,
+        setAddedToBasket,
         closeSidebar,
       }}
     >
