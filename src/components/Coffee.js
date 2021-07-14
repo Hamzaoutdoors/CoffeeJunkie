@@ -3,11 +3,17 @@ import { Link } from "react-router-dom";
 import { useGlobalContext } from "../context";
 
 
-const Coffee = ({ id, category, name, imgThum, imgDtl, info, price }) => {
+const Coffee = ({ id, category, name, imgThum, sign ,imgDtl, info, price }) => {
   const {
     setAddedToBasket,
     addedToBasket
   } = useGlobalContext();
+
+ const  handelClick =()=>{
+   
+  var addedToBasketBis = sign =='+' ? [...addedToBasket, id]: addedToBasket.filter(x=>x != id);
+  setAddedToBasket(addedToBasketBis);
+  }
 
   return (
     <article className="coffee">
@@ -21,8 +27,8 @@ const Coffee = ({ id, category, name, imgThum, imgDtl, info, price }) => {
           <Link to={`/coffee/${id}`} className="btn-primary">
             details
           </Link>
-          <button className='btn btn-add-basket' onClick={()=>setAddedToBasket([...addedToBasket, id])} >
-            +     
+          <button className='btn btn-add-basket' onClick={handelClick} >
+            {sign}   
           </button>
         </div>
       </div>

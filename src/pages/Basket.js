@@ -12,7 +12,7 @@ function Basket() {
            <h1> our Basket is Empty</h1> 
         </div>: <div className="coffees-center">
         {intersection.map((item) => {
-          return <Coffee key={item.id} imgThum={item.thumbnail_image} category={item.categories} {...item} />;
+          return <Coffee key={item.id} imgThum={item.thumbnail_image} sign='-' category={item.categories} {...item} />;
         })}
       </div> }  
         
