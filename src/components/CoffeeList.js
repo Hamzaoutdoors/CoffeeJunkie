@@ -37,7 +37,7 @@ const CoffeeList = () => {
       </div>
       <div className="coffees-center">
         {filterCoffees.map((item) => {
-          return <Coffee key={item.id} {...item} />;
+          return <Coffee key={item.id} sign='+' {...item} />;
         })}
       </div>
     </section>
