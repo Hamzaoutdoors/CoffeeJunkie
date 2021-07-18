@@ -138,7 +138,7 @@ Buttons
   color: var(--mainWhite);
   border-color: var(--mainWhite);
 }
-.btn-add-basket{
+.btn-add-basket {
   margin-left: 150px;
 }
 .btn-white:hover {
@@ -347,11 +347,83 @@ Navbar
   font-weight: 500;
   letter-spacing: 4px;
 }
+.contact-section{
+  border-top: 1px solid #333;
+  margin: 24px 24px 0 24px;
+
+}
+.contact-container {
+  margin: 0 24px;
+}
+
+.contact-title {
+  color: #172b4d;
+  font-size: 1.5rem;
+  line-height: 43px;
+  text-align: center;
+  padding-bottom: 20px;
+  margin-top: 10px;
+}
+
+.contact-container input {
+  outline: 0;
+  border-width: 0 0 1px;
+  border-color: #dbd8d7;
+  box-sizing: border-box;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  margin-bottom: 30px;
+  height: 30px;
+  padding: 20px;
+  font-family: Inter, sans-serif;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.contact-container textarea {
+  border: none;
+  background-color: #fbf8f7;
+  height: 114px;
+}
+
+.contact-btn {
+  width: 135px;
+  height: 48px;
+  font-size: 10px;
+  align-self: center;
+  padding: 5px;
+  margin: 15px 0;
+}
 
 @media screen and (min-width: 800px) {
+  .contact-container{
+    margin-top: 50px;
+  }
   .sidebar-wrapper {
     display: none;
   }
+  .contact-container {
+    display: flex;
+    flex-direction: row;
+  }
+  .contact-container form {
+    flex: 1;
+  }
+  .contact-container h3 {
+    width: 40%;
+    margin-right: 40px;
+    text-align: left;
+  }
+
+  .contact-container form ul li:nth-child(4) {
+    align-self: flex-start;
+  }
+ 
 }
 
 /* 

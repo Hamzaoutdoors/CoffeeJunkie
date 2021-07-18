@@ -48,6 +48,55 @@ const About = () => {
           </ul>
         </div>
       </section>
+      <section class="contact-section">
+        <div class="contact-container d-flex flex-dir-col">
+          <h3 class="contact-title">
+            I'm always interested in hearing about new projects, so if you'd
+            like to chat please get in touch.
+          </h3>
+          <form action="https://formspree.io/f/mayadege" method="post">
+            <ul class="d-flex flex-dir-col">
+              <li>
+                <label for="name"></label>
+                <input
+                  type="text"
+                  id="name"
+                  name="user_name"
+                  placeholder="Full name"
+                  required
+                />
+              </li>
+              <li>
+                <label for="mail"></label>
+                <input
+                  type="email"
+                  id="mail"
+                  name="user_email"
+                  placeholder="Email adress"
+                  required
+                />
+              </li>
+              <li>
+                <label for="msg"></label>
+                <textarea
+                  id="msg"
+                  name="user_message"
+                  placeholder="Enter text here"
+                  maxlength="500"
+                  required
+                ></textarea>
+              </li>
+              <li>
+                <input
+                  type="submit"
+                  value="Get in Touch"
+                  class="btn-primary contact-btn"
+                />
+              </li>
+            </ul>
+          </form>
+        </div>
+      </section>
     </main>
   );
 };
