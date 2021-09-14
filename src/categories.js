@@ -8,7 +8,7 @@ const coffeeCategories = [
   },
   {
     id: 2,
-    name: "Espresso",
+    name: "Espreso",
     detail_image: "./categories/detail/espresso.jpg",
     title: "Hand Picked for You",
     subtitle:
