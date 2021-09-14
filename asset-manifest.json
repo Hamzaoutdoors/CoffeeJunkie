@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/CoffeeJunkie/static/css/main.24cf5213.chunk.css",
+    "main.js": "/CoffeeJunkie/static/js/main.dc299d6c.chunk.js",
+    "main.js.map": "/CoffeeJunkie/static/js/main.dc299d6c.chunk.js.map",
+    "runtime-main.js": "/CoffeeJunkie/static/js/runtime-main.6e980c20.js",
+    "runtime-main.js.map": "/CoffeeJunkie/static/js/runtime-main.6e980c20.js.map",
+    "static/js/2.ddfbfb68.chunk.js": "/CoffeeJunkie/static/js/2.ddfbfb68.chunk.js",
+    "static/js/2.ddfbfb68.chunk.js.map": "/CoffeeJunkie/static/js/2.ddfbfb68.chunk.js.map",
+    "index.html": "/CoffeeJunkie/index.html",
+    "precache-manifest.a279ffedb17041b48872717fcbabdcc9.js": "/CoffeeJunkie/precache-manifest.a279ffedb17041b48872717fcbabdcc9.js",
+    "service-worker.js": "/CoffeeJunkie/service-worker.js",
+    "static/css/main.24cf5213.chunk.css.map": "/CoffeeJunkie/static/css/main.24cf5213.chunk.css.map",
+    "static/js/2.ddfbfb68.chunk.js.LICENSE.txt": "/CoffeeJunkie/static/js/2.ddfbfb68.chunk.js.LICENSE.txt",
+    "static/media/logoCoffee.svg": "/CoffeeJunkie/static/media/logoCoffee.1151141c.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6e980c20.js",
+    "static/js/2.ddfbfb68.chunk.js",
+    "static/css/main.24cf5213.chunk.css",
+    "static/js/main.dc299d6c.chunk.js"
+  ]
+}
