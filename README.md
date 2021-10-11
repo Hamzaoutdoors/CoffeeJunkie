@@ -2,12 +2,11 @@
 
 CoffeeJunkie Desktop/Mobile version : 
 
-![screenShoot1](https://user-images.githubusercontent.com/80895497/126080666-46bf6100-72a3-4483-b487-f750e5318d79.PNG)
-![navbar](https://user-images.githubusercontent.com/80895497/126080674-60f0680a-957b-442e-9f01-9107217a0efa.PNG)
-![screen navbar](https://user-images.githubusercontent.com/80895497/126080677-9cf48f1f-8641-4f01-9f6b-9803593bc1cd.PNG)
+<div float = "center">
+<img src="https://user-images.githubusercontent.com/80895497/126080666-46bf6100-72a3-4483-b487-f750e5318d79.PNG" width="100%"/> </br> <img src="https://user-images.githubusercontent.com/80895497/126080674-60f0680a-957b-442e-9f01-9107217a0efa.PNG" width="40%" height="100%"/> <img src="https://user-images.githubusercontent.com/80895497/126080677-9cf48f1f-8641-4f01-9f6b-9803593bc1cd.PNG" width="40%" height="100%"/>
+</div>
 
-
-
+</br>
 The goal for this project is to keep practicing linters, learn how
 
 ## Project React/JavaScript ES-6
